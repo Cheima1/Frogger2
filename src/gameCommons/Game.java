@@ -77,7 +77,7 @@ public class Game {
 	 */
 	public boolean testLose() {
 		// TODO
-		return false;
+		return !environment.isSafe(frog.getPosition());
 	}
 
 	/**
@@ -88,7 +88,7 @@ public class Game {
 	 */
 	public boolean testWin() {
 		// TODO
-		return false;
+		return environment.isWinningPosition(frog.getPosition());
 	}
 
 	/**

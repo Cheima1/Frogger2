@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="727caed1-0274-4732-82ce-84fd5a113af6" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/frog/Frog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/frog/Frog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gameCommons/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gameCommons/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gameCommons/IEnvironment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gameCommons/IEnvironment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gameCommons/IFrog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gameCommons/IFrog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gameCommons/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gameCommons/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphicalElements/Element.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphicalElements/Element.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphicalElements/FroggerGraphic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphicalElements/FroggerGraphic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphicalElements/IFroggerGraphics.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphicalElements/IFroggerGraphics.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/util/Case.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/util/Case.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/util/Direction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/util/Direction.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="21SS31uZ7R9xA2nHklZUeK1Kv6q" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/givenEnvironment.jar" />
+    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="settings.space" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\cheim\OneDrive\Documents\git\Frogger2\src" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="gameCommons.Main" />
+      <module name="Frogger2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="gameCommons.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="727caed1-0274-4732-82ce-84fd5a113af6" name="Changes" comment="" />
+      <created>1637932793380</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1637932793380</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

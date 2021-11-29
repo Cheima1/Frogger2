@@ -2,8 +2,8 @@ package infiniteFrogger;
 
 import gameCommons.Game;
 import gameCommons.IFrog;
-import util.Case;
-import util.Direction;
+import util.*
+
 
 import java.awt.image.DirectColorModel;
 
@@ -55,5 +55,5 @@ public class FrogInf implements IFrog {
 
         this.game.testWin();
         this.game.testLose();
-        System.out.println(this.position.absc+""+ this.position + " score :");
+        System.out.println(this.position.absc+""+ this.position.ord + " score :");
 }

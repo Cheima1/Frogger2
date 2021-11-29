@@ -2,16 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="727caed1-0274-4732-82ce-84fd5a113af6" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/frog/Frog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/frog/Frog.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gameCommons/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gameCommons/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gameCommons/IEnvironment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gameCommons/IEnvironment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gameCommons/IFrog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gameCommons/IFrog.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gameCommons/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gameCommons/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/graphicalElements/Element.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphicalElements/Element.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/graphicalElements/FroggerGraphic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphicalElements/FroggerGraphic.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/graphicalElements/IFroggerGraphics.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphicalElements/IFroggerGraphics.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/util/Case.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/util/Case.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/util/Direction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/util/Direction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Frogger2/frog/Frog.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Frogger2/gameCommons/Game.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Frogger2/gameCommons/IEnvironment.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Frogger2/gameCommons/IFrog.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Frogger2/gameCommons/Main$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Frogger2/gameCommons/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Frogger2/graphicalElements/Element.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Frogger2/graphicalElements/FroggerGraphic.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Frogger2/graphicalElements/IFroggerGraphics.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Frogger2/util/Case.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Frogger2/util/Direction.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,5 +84,6 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>

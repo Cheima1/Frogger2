@@ -66,11 +66,7 @@ public class Car {
 
 	public boolean isAccident(Case posG) {
 		// utiliser isSafe
-		if (posG.ord == leftPosition.ord) {
-			return true;
-		} else {
-			return false;
-		}
+		return posG.ord == leftPosition.ord;
 	}
 
 	// Methode carAppears
@@ -82,11 +78,7 @@ public class Car {
 
 	public boolean carAppears() {
 		int res = leftPosition.absc + length;
-		if (res > 0 || leftPosition.absc < game.width) {
-			return true;
-		} else {
-			return false;
-		}
+		return res > 0 || leftPosition.absc < game.width;
 	}
 
 	/* Fourni : addToGraphics() permettant d'ajouter un element graphique correspondant a la voiture*/

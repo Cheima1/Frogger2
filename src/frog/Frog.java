@@ -3,6 +3,7 @@ package frog;
 import gameCommons.Game;
 import gameCommons.IFrog;
 import util.*;
+import java.awt.Color;
 
 public class Frog implements IFrog {
 	
@@ -42,7 +43,8 @@ public class Frog implements IFrog {
 				position = new Case(position.absc, position.ord + 1);
 			}
 		}
-
+		
+		this.game.getGraphic().add(new Element(this.position, Color.Green));
 		game.testWin();
 		game.testLose();
 	}

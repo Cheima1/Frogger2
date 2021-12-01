@@ -42,9 +42,7 @@ public class Environment implements IEnvironment {
         return true;
     }
 
-    public boolean isWinningPosition(Case c) {
-        return c.absc == game.height-1;
-    }
+    public boolean isWinningPosition(Case c) { return c.absc == game.height-1;}
 
     public void update() {
         for (Lane l : lanes) {

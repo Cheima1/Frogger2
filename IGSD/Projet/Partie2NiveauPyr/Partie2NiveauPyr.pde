@@ -22,8 +22,10 @@ boolean inLab = true;
 
 
 int MUR = 1;
-int NIVEAU = 4;
+int NIVEAU = 5;
 int LAB_SIZE = 21;
+int mazeWidth = 80;
+int mazeHeight = 80;
 char labyrinthe [][][];
 char sides [][][];
 
@@ -32,6 +34,8 @@ PShape ceil;
 PShape ceil1;
 
 PImage texture0;
+
+// ____________________________________
 
 void setup() { 
   //pixelDensity(2);
@@ -109,6 +113,7 @@ void setup() {
     println("");
   }
   }
+  
   //---------------------------------
   
   
@@ -206,6 +211,10 @@ void setup() {
   ceil1.endShape();
 }
 
+
+// ______________________________________________________________________
+
+
 void draw() {
   background(192);
   
@@ -226,8 +235,8 @@ void draw() {
         if (labyrinthe[n][j][i]=='#') {
           fill(i*25, j*25, 255-i*10+j*10);
           pushMatrix();
-          //translate(50+i*labW/8, 50+j*labH/8, n*100);
-          translate(50+i*labW/8, 50+j*labH/8, 50);
+          translate(150+i*labW/8, 150+j*labH/8, n*100);
+          //translate(50+i*labW/8, 50+j*labH/8, 50);
           box(labW/10, labH/10, 10);
           popMatrix();
         }
@@ -235,16 +244,16 @@ void draw() {
     }
   }
   
-    // sphere dans la map
+  // sphere dans la map
   pushMatrix();
   fill(0, 255, 0);
   //noStroke();
   stroke(255);
-  translate(50+posX*labW/8, 50+posY*labH/8, 50);
+  translate(150+posX*labW/8, 150+posY*labH/8, 50);
   sphere(3);
   popMatrix();
   
-  // camera
+  // camera de l'aventurier
   if (inLab) {
     perspective(2*PI/3, float(width)/float(height), 1, 1000);
     if (animT)
@@ -263,7 +272,11 @@ void draw() {
     lightFalloff(0.0, 0.01, 0.0001);
     pointLight(255, 255, 255, posX*labW, posY*labH, 15);
   } else {
-    lightFalloff(0.0, 0.05, 0.0001);
+    //lightFalloff(0.0, 0.05, 0.0001);
+    //camera(70.0, 35.0, 420.0, 50.0, 50.0, 0.0, 0.0, 1.0, 0.0);
+    //translate(-width/8, 100/2, 100);
+    translate(0, 0, -1000);
+    rotateX(50*PI/8);
     pointLight(255, 255, 255, posX*labW, posY*labH, 15);
   }
   
@@ -271,65 +284,65 @@ void draw() {
 // --------------------------------------------
  
   stroke(0);
-  
   noStroke();
   for(int n = 0; n < NIVEAU; n++) {
-  for (int j=0; j<LAB_SIZE; j++) {
-    for (int i=0; i<LAB_SIZE; i++) {
-      pushMatrix();
-      translate(i*labW, j*labH, 0);
-      
-      if (labyrinthe[n][j][i]=='#') {
-        beginShape(QUADS);
+    for (int j=0; j<LAB_SIZE; j++) {
+      for (int i=0; i<LAB_SIZE; i++) {
+        pushMatrix();
+        translate(i*labW, j*labH, 0);
         
-        if (sides[j][i][3]==1) {
-          pushMatrix();
-          translate(0, -labH/2, 40);
-          if(i == posX || j == posY) {
-            fill(i*25, j*25, 255-i*10+j*10);
-            sphere(5);
-            spotLight(i*25, j*25, 255-i*10+j*10, 0, -15, 15, 0, 0, -1, PI/4, 1);
-          }
-          popMatrix();
-        }
-
-        if (sides[j][i][0]==1) {
-          pushMatrix();
-          translate(0, labH/2, 40);
-          if (i==posX || j==posY) {
-            fill(i*25, j*25, 255-i*10+j*10);
-            sphere(5);              
-           // spotLight(i*25, j*25, 255-i*10+j*10, 0, -15, 15, 0, 0, -1, PI/4, 1);
-          }
-          popMatrix();
-        }
-         
-         if (sides[j][i][1]==1) {
-          pushMatrix();
-          translate(-labW/2, 0, 40);
-          if (i==posX || j==posY) {
-            fill(i*25, j*25, 255-i*10+j*10);
-            sphere(5);              
-            spotLight(i*25, j*25, 255-i*10+j*10, 0, -15, 15, 0, 0, -1, PI/4, 1);
-         }
-          popMatrix();
-        }
-         
-        if (sides[j][i][2]==1) {
-          pushMatrix();
-          translate(0, labH/2, 40);
-          if (i==posX || j==posY) {
-            fill(i*25, j*25, 255-i*10+j*10);
-            sphere(5);              
-            spotLight(i*25, j*25, 255-i*10+j*10, 0, -15, 15, 0, 0, -1, PI/4, 1);
-          }
-          popMatrix();
-        }
+          if (labyrinthe[n][j][i]=='#') {
+            beginShape(QUADS);
+            
+            if (sides[j][i][3]==1) {
+              pushMatrix();
+              translate(0, -labH/2, 40);
+              if(i == posX || j == posY) {
+                fill(i*25, j*25, 255-i*10+j*10);
+                sphere(5);
+                spotLight(i*25, j*25, 255-i*10+j*10, 0, -15, 15, 0, 0, -1, PI/4, 1);
+              }
+              popMatrix();
+            }
+    
+            if (sides[j][i][0]==1) {
+              pushMatrix();
+              translate(0, labH/2, 40);
+              if (i==posX || j==posY) {
+                fill(i*25, j*25, 255-i*10+j*10);
+                sphere(5);              
+               // spotLight(i*25, j*25, 255-i*10+j*10, 0, -15, 15, 0, 0, -1, PI/4, 1);
+              }
+              popMatrix();
+            }
+             
+             if (sides[j][i][1]==1) {
+              pushMatrix();
+              translate(-labW/2, 0, 40);
+              if (i==posX || j==posY) {
+                fill(i*25, j*25, 255-i*10+j*10);
+                sphere(5);              
+                spotLight(i*25, j*25, 255-i*10+j*10, 0, -15, 15, 0, 0, -1, PI/4, 1);
+             }
+              popMatrix();
+            }
+             
+            if (sides[j][i][2]==1) {
+              pushMatrix();
+              translate(0, labH/2, 40);
+              if (i==posX || j==posY) {
+                fill(i*25, j*25, 255-i*10+j*10);
+                sphere(5);              
+                spotLight(i*25, j*25, 255-i*10+j*10, 0, -15, 15, 0, 0, -1, PI/4, 1);
+              }
+              popMatrix();
+            }
       } 
       popMatrix();
     }
   }
   }
+  
   shape(laby, 0, 0);
   //shape(ceil, 0, 0);
   
@@ -353,14 +366,14 @@ void keyPressed() {
       animR = false;
     }
   }
-}
-  
+
   // Touche reculer
   /*if (anim==0 && keyCode==40 && labyrinthe[posY-dirY][posX-dirX]!='#') {
     posX-=dirX; 
     posY-=dirY;
   }*/
-  /*if (anim==0 && keyCode==37) {
+  
+  if (anim==0 && keyCode==37) {
     odirX = dirX;
     odirY = dirY;
     anim = 20;
@@ -380,4 +393,4 @@ void keyPressed() {
     dirX=-dirY; 
     dirY=tmp;
   }
-}*/
+}

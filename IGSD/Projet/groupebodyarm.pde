@@ -132,7 +132,8 @@ void setup(){
   
 }
 
-
+// Pour mettre la momie dans le labyrinthe il faut utiliser framecount pour la deplacer 
+// il faut la mettre à un posx, posy dans le draw
 void draw(){
  
   perspective();

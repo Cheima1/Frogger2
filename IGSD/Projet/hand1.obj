@@ -1,6 +1,6 @@
 # Blender v2.82 (sub 7) OBJ File: ''
 # www.blender.org
-mtllib h/Users/vernier/Documents/Processing/Labyramide/hand1.mtland1.mtl
+mtllib hand1.mtl
 o 15800_Mummy_Hand_v1_NEW
 v -7.547936 1.675497 7.057691
 v -8.284888 1.130729 8.355188
@@ -10,7 +10,7 @@ v -7.736567 0.266719 8.999491
 v -7.247026 0.414940 9.055413
 v -6.842701 1.078919 10.129289
 v -6.908340 0.468167 9.094106
-v -7.076765 0/Users/vernier/Documents/Processing/Labyramide/hand1.mtl.506667 9.498768
+v -7.076765 0.506667 9.498768
 v -6.999883 0.937064 10.082165
 v -7.074214 1.270626 10.249468
 v -6.787194 1.110091 10.481509

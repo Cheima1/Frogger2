@@ -49,7 +49,8 @@ PShape body;
 PShape head;
 
 float ry;
-//PShape hand1; 
+PShape hand1; 
+PShape hand2;
 
 // il manque les shader sur la momie si on arrive a faire ca on est bien aussi
 
@@ -57,12 +58,13 @@ void setup(){
   size(1000, 1000, P3D);
   frameRate(2);
   texture0 = loadImage("bandages.png");
- // shade = new PShader(g.parent, vertSrc, fragSrc );
+ shade = new PShader(g.parent, vertSrc, fragSrc );
   //for(int i = 0; i < vertSrc.length;i++) {
   //shade = loadShader(vertSrc[i], fragSrc[i]);
   //}
-  //hand1 = loadShape("hand1.obj");
-  
+  hand1 = loadShape("hand1.obj");
+  hand2 = loadShape("hand2.obj");
+    
   armr = createShape();
   body = createShape();
   head = createShape();
@@ -123,7 +125,7 @@ void setup(){
       head.vertex(R2*cos(a), R2*sin(a),i, 100, 10);
       head.vertex(R2*cos(a), R2*sin(a),i+60, 100, 20);
       head.tint(n*7,n*5,n+40);
-      
+      shader(shade);
      }
   }
   head.endShape();
@@ -139,8 +141,8 @@ void draw(){
          // 0, 0, -1, PI/16, 30); 
   //pointLight(51, 102, 126, 140, 160, 144);
   //pointLight(50, 0, 50, 7, 50, 15);
-  translate (width/2, height/1.5);
-  rotateX(PI/2);
+  translate(width/2, height/1.5);
+  rotateX(PI/3);
   background(255,192,255);
   
   //CORPS
@@ -160,13 +162,16 @@ void draw(){
   shape(armr,0,0);
   popMatrix();
   
- // main objet
+ // main objet right
   pushMatrix();
   translate(width/2, height/2 + 100, -200);
   rotateZ(PI);
-  //shape(hand1);
   popMatrix();
-  
+  pushMatrix();
+  scale(10);
+  translate(15,0,0);
+  shape(hand1);
+  popMatrix();
   
   // BRAS GAUCHE
   pushMatrix();
@@ -175,6 +180,12 @@ void draw(){
   rotateY(PI);
   scale(0.2,0.5,0.5);
   shape(armr,200,0);
+  popMatrix();
+  
+  // main objet left
+  pushMatrix();
+  translate(20,0,0);
+  shape(hand2);
   popMatrix();
   
   //TETE

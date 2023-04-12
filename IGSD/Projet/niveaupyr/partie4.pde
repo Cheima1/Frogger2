@@ -132,7 +132,7 @@ void setup() {
   
    float wallW = width/LAB_SIZE;
    float wallH = height/LAB_SIZE;
-
+   
   for(int n = 0; n < NIVEAU; n++){
      translate(width/2, height/2);
      pushMatrix();
@@ -150,7 +150,6 @@ void setup() {
   for (int j=0; j<LAB_SIZE; j++) {
     for (int i=0; i<LAB_SIZE; i++) {
       if (labyrinthe[n][j][i]=='#') {
-        
         laby0[n].fill(i*25, j*25, 255-i*10+j*10);
         if (j==0 || labyrinthe[n][j-1][i]==' ') {
           laby0[n].normal(0, -1, 0);
@@ -245,14 +244,14 @@ void cone(int size) {
   vertex(-size, -size,- size);
   endShape();
   
-  
+  terrainSable();
 }
 // ______________________________________________________________________
 
 
 void draw() {
   background(192);
-  
+  //terrainSable();
   //image(cielBleu, 0,0);
   if(anim>0) anim--;
   LAB_SIZE=21-3*actuel;
@@ -286,9 +285,10 @@ void draw() {
   fill(0, 255, 0);
   //noStroke();
   stroke(255);
-  translate(150+posX*labW/8, 150+posY*labH/8, 50);
+  translate(150+posX*labW/8, 150+posY*labH/8, actuel*100);
   sphere(3);
   popMatrix();
+  
   
   // camera de l'aventurier
   if (inLab) {
@@ -313,9 +313,12 @@ void draw() {
     //camera(70.0, 35.0, 420.0, 50.0, 50.0, 0.0, 0.0, 1.0, 0.0);
     //translate(-width/8, 100/2, 100);
     translate(0, 0, -1000);
+    //translate(-1500, -500, -180);
     background(cielBleu);
+    //terrainSable();
     rotateX(PI/3.5);
     lights();
+    
     pointLight(255, 255, 255, posX*labW, posY*labH, 15);
   }
   
@@ -384,7 +387,7 @@ void draw() {
   }
   }
   for(int t=0; t < NIVEAU; t++){
-      translate(labW, labH, 0);
+      //translate(labW, labH, 0);
   //shape(laby0[t], 0, 0);
   //shape(ceil, 0, 0);
   
@@ -402,8 +405,12 @@ void draw() {
     //cone(100);
     
   }
-  //terrainSable();
   }
+  //translate(0, 0, -60);
+  
+  //translate(10, 10, 0);
+  translate(-1600, -1000, -800);
+  terrainSable();
 }
 
 void keyPressed() {

@@ -411,7 +411,62 @@ void draw() {
   //translate(10, 10, 0);
   translate(-1600, -1000, -800);
   terrainSable();
+  
+  translate(472,472,96);
+    box(900, 900,90);
+    translate(0, 0, 90);
+    fill(255);
+    box(800, 800,90);
+    translate(0, 0, 90);
+    fill(0);
+    box(700, 700,90);
+    translate(0, 0, 90);
+    fill(150);
+    box(600, 600,90);
+    translate(0, 0, 90);
+    fill(255);
+    box(500, 500,90);
+    translate(0, 0, 90);
+    fill(0);
+    box(400, 400,90);
+    translate(0, 0, 90);
+    fill(255);
+    box(300, 300,90);
+    translate(0, 0, 90);
+    fill(0);
+    box(200, 200,90);
+    
+     beginShape(TRIANGLES);
+  int t = 210;
+  fill(255, 150); 
+  vertex(-t, -t, -t);
+  vertex( t, -t, -t);
+  vertex( 0, 0, t);
+
+  fill(150, 150);
+  vertex( t, -t, -t);
+  vertex( t, t, -t);
+  vertex( 0, 0, t);
+
+  fill(255, 150);
+  vertex( t, t, -t);
+  vertex(-t, t, -t);
+  vertex( 0, 0, t);
+
+  fill(150, 150);
+  vertex(-t, t, -t);
+  vertex(-t, -t, -t);
+  vertex( 0, 0, t);
+
+  endShape();
 }
+
+
+    
+
+    
+
+
 
 void keyPressed() {
 
